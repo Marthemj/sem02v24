@@ -8,7 +8,14 @@ sudo \
 nano \
 wget \
 curl \
-git
+git \
+build-essential \
+gcc \
+openjdk-21-jdk \
+mono-complete \
+python3 \
+strace \
+valgrind
 RUN useradd -G sudo -m -d /home/marthemj -s /bin/bash -p "$(openssl passwd -1 1234)" marthemj
 USER marthemj
 WORKDIR /home/marthemj
