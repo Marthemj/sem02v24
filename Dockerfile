@@ -9,8 +9,7 @@ nano \
 wget \
 curl \
 git
-RUN useradd -G sudo -m -d /home/marthemj -s /bin/bash -p "$(openssl
-passwd -1 1234)" marthemj
+RUN useradd -G sudo -m -d /home/marthemj -s /bin/bash -p "$(openssl passwd -1 1234)" marthemj
 USER marthemj
 WORKDIR /home/marthemj
 RUN mkdir hacking \
