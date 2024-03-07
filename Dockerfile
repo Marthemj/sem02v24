@@ -14,16 +14,12 @@ USER marthemj
 WORKDIR /home/marthemj
 RUN mkdir hacking \
 && cd hacking \
-&& curl -SL
-https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v2
-4/pawned.sh > pawned.sh \
+&& curl -SL https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v24/pawned.sh > pawned.sh \
 && chmod 764 pawned.sh \
 && cd ..
-RUN git config --global user.email "marthemj@gmail.com"
-\
+RUN git config --global user.email "marthemj@gmail.com"\
 && git config --global user.name "marthemj" \
-&& git config --global url."https://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:@github.com/".insteadOf
-"https://github.com" \
+&& git config --global url."https://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:@github.com/".insteadOf"https://github.com" \
 && mkdir -p github.com/marthemj
 USER root
 RUN curl -SL https://go.dev/dl/go1.21.7.OS-ARCH.tar.gz \
